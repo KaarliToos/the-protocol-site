@@ -381,6 +381,24 @@ button {
   color: rgba(255, 255, 255, .84);
 }
 
+.domain-manifesto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 22px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+}
+
+.domain-manifesto strong {
+  font-family: Fredoka, Inter, sans-serif;
+  font-size: clamp(24px, 4vw, 48px);
+  line-height: 1;
+}
+
 .blue { background: var(--blue); }
 .green { background: var(--green); }
 .red { background: var(--red); }
@@ -527,5 +545,9 @@ button {
   .protocol-card.large {
     grid-column: auto;
     min-height: 340px;
+  }
+
+  .domain-manifesto {
+    display: grid;
   }
 }
