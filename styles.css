@@ -183,12 +183,16 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  filter: saturate(1.12) contrast(1.02) brightness(1.04);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(4, 20, 52, .82), rgba(4, 30, 80, .28) 56%, rgba(4, 20, 52, .50));
+  background:
+    linear-gradient(90deg, rgba(4, 20, 52, .58), rgba(4, 30, 80, .12) 55%, rgba(4, 20, 52, .24)),
+    linear-gradient(0deg, rgba(4, 20, 52, .52), transparent 42%);
 }
 
 .hero-content {
@@ -227,6 +231,17 @@ button {
 .hero-content p:not(.eyebrow) {
   max-width: 580px;
   font-size: clamp(18px, 2.6vw, 25px);
+}
+
+.hero-rule {
+  margin: 20px 0 0;
+  font-family: Fredoka, Inter, sans-serif;
+  font-size: clamp(28px, 4vw, 56px) !important;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: .94;
+  text-transform: uppercase;
+  text-shadow: 0 12px 28px rgba(0, 0, 0, .24);
 }
 
 .button-row {
@@ -455,14 +470,25 @@ button {
   display: grid;
   align-content: end;
   padding: 22px;
+  border: 0;
   border-radius: 8px;
   color: white;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
   overflow: hidden;
-  transition: transform .2s ease;
+  box-shadow: var(--soft-shadow);
+  transition: transform .2s ease, box-shadow .2s ease, outline-color .2s ease;
 }
 
-.domain-card:hover {
+.domain-card:hover,
+.domain-card.active {
   transform: translateY(-5px);
+}
+
+.domain-card.active {
+  outline: 4px solid rgba(16, 24, 40, .16);
+  box-shadow: 0 26px 70px rgba(16, 24, 40, .22);
 }
 
 .domain-card p {
@@ -485,6 +511,96 @@ button {
 .red { background: var(--red); }
 .orange { background: var(--orange); }
 .purple { background: var(--purple); }
+
+.domain-detail {
+  --domain-accent: var(--blue);
+  display: grid;
+  grid-template-columns: 1.1fr .9fr auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: 18px;
+  padding: clamp(26px, 4vw, 46px);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--domain-accent) 18%, white), #fffdf8 64%),
+    var(--paper);
+  box-shadow: var(--shadow);
+  border: 1px solid color-mix(in srgb, var(--domain-accent) 30%, transparent);
+}
+
+.domain-detail[data-active-domain="sleep"] { --domain-accent: var(--blue); }
+.domain-detail[data-active-domain="nutrition"] { --domain-accent: var(--green); }
+.domain-detail[data-active-domain="performance"] { --domain-accent: var(--red); }
+.domain-detail[data-active-domain="mental"] { --domain-accent: var(--orange); }
+.domain-detail[data-active-domain="routine"] { --domain-accent: var(--purple); }
+
+.domain-detail h3 {
+  margin: 0;
+  font-family: Fredoka, Inter, sans-serif;
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: .95;
+}
+
+.domain-detail p:not(.section-kicker) {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.domain-detail .section-kicker {
+  color: var(--domain-accent);
+}
+
+.domain-detail ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.domain-detail li {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font-weight: 900;
+  box-shadow: var(--soft-shadow);
+}
+
+.domain-link {
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  min-width: 190px;
+  padding: 18px;
+  border-radius: 8px;
+  color: white;
+  background: var(--domain-accent);
+  font-weight: 900;
+  text-align: center;
+}
+
+.domain-manifesto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 22px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+}
+
+.domain-manifesto strong {
+  font-family: Fredoka, Inter, sans-serif;
+  font-size: clamp(24px, 4vw, 48px);
+  line-height: 1;
+}
 
 .programme-card {
   min-height: 270px;
@@ -697,12 +813,17 @@ button {
   .problem-grid,
   .tools-panel,
   .calendar-details,
-  .shop-hero {
+  .shop-hero,
+  .domain-detail {
     grid-template-columns: 1fr;
   }
 
   .sleep-hero {
     min-height: 0;
+  }
+
+  .domain-link {
+    min-width: 0;
   }
 }
 
@@ -727,7 +848,8 @@ button {
 
   .programme-card,
   .final-cta,
-  .site-footer {
+  .site-footer,
+  .domain-manifesto {
     display: grid;
   }
 

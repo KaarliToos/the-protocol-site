@@ -43,9 +43,9 @@
         <div class="hero-content reveal">
           <p class="eyebrow">Your life. Your rules.</p>
           <h1>Cree. Joue. Evolue.</h1>
-          <p>Une methode simple pour transformer ta vie, un jour a la fois.</p>
+          <p class="hero-rule">YOUR LIFE. YOUR RULES.</p>
           <div class="button-row">
-            <a class="primary-button" href="#pourquoi">Decouvrir THE PROTOCOL</a>
+            <a class="primary-button" href="#domaines">Explorer les 5 domaines</a>
             <a class="ghost-button" href="#systeme">Comment ca marche</a>
           </div>
         </div>
@@ -118,19 +118,36 @@
 
       <section class="section domains-section" id="domaines">
         <div class="section-heading reveal">
-          <p class="section-kicker">Les 5 domaines</p>
-          <h2>Une vie. Cinq domaines.</h2>
-          <p>Tu n'as pas besoin de tout changer. Commence simplement quelque part.</p>
+          <p class="section-kicker">Page principale</p>
+          <h2>Les 5 domaines THE PROTOCOL.</h2>
+          <p>Chaque domaine a sa couleur, son energie et ses outils. Clique sur une carte pour construire ton premier protocole.</p>
         </div>
         <div class="domains-showcase reveal">
           <img src="assets/domains-cards.png" alt="Cartes colorees des cinq domaines THE PROTOCOL">
         </div>
-        <div class="domain-grid">
-          <a class="domain-card blue reveal" href="#pourquoi"><h3>Sommeil & recuperation</h3><p>Dormir. Recuperer. Recharger.</p><span>→</span></a>
-          <a class="domain-card green reveal" href="#shop"><h3>Nutrition & sante</h3><p>Nourrir. Comprendre. Equilibrer.</p><span>→</span></a>
-          <a class="domain-card red reveal" href="#shop"><h3>Corps & performance</h3><p>Bouger. Renforcer. Progresser.</p><span>→</span></a>
-          <a class="domain-card orange reveal" href="#shop"><h3>Mental & apprentissage</h3><p>Apprendre. Comprendre. Creer.</p><span>→</span></a>
-          <a class="domain-card purple reveal" href="#shop"><h3>Routine & motivation</h3><p>Planifier. Agir. Continuer.</p><span>→</span></a>
+        <div class="domain-grid" role="tablist" aria-label="Choisir un domaine">
+          <button class="domain-card blue reveal active" type="button" data-domain="sleep" role="tab" aria-selected="true"><h3>Sommeil & recuperation</h3><p>Dormir. Recuperer. Recharger.</p><span>→</span></button>
+          <button class="domain-card green reveal" type="button" data-domain="nutrition" role="tab" aria-selected="false"><h3>Nutrition & sante</h3><p>Nourrir. Comprendre. Equilibrer.</p><span>→</span></button>
+          <button class="domain-card red reveal" type="button" data-domain="performance" role="tab" aria-selected="false"><h3>Corps & performance</h3><p>Bouger. Renforcer. Progresser.</p><span>→</span></button>
+          <button class="domain-card orange reveal" type="button" data-domain="mental" role="tab" aria-selected="false"><h3>Mental & apprentissage</h3><p>Apprendre. Comprendre. Creer.</p><span>→</span></button>
+          <button class="domain-card purple reveal" type="button" data-domain="routine" role="tab" aria-selected="false"><h3>Routine & motivation</h3><p>Planifier. Agir. Continuer.</p><span>→</span></button>
+        </div>
+        <article class="domain-detail reveal" data-active-domain="sleep" aria-live="polite">
+          <div>
+            <p class="section-kicker" id="domain-kicker">Domaine bleu</p>
+            <h3 id="domain-title">Sommeil & recuperation</h3>
+            <p id="domain-copy">Reprendre de l'energie commence par des nuits plus simples, mieux observees et mieux protegees.</p>
+          </div>
+          <ul id="domain-actions">
+            <li>Sleep Saver</li>
+            <li>Respiration du soir</li>
+            <li>Journal sommeil</li>
+          </ul>
+          <a class="domain-link" id="domain-link" href="#pourquoi">Entrer dans ce domaine</a>
+        </article>
+        <div class="domain-manifesto reveal">
+          <strong>ONE TOOL. ONE DAY. ONE ACTION. ONE UPGRADE.</strong>
+          <a class="primary-button" href="#shop">Choisir mon premier domaine</a>
         </div>
       </section>
 
