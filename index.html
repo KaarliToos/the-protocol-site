@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>THE PROTOCOL - Unlock You</title>
-    <meta name="description" content="THE PROTOCOL - une methode simple pour transformer ta vie, un jour a la fois.">
+    <title>THE PROTOCOL</title>
+    <meta name="description" content="THE PROTOCOL - jouer, evoluer, construire tes propres regles.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,216 +22,90 @@
         <span></span>
       </button>
       <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#pourquoi">Pourquoi</a>
-        <a href="#domaines">Domaines</a>
-        <a href="#outils">Outils</a>
-        <a href="#calendrier">Calendrier</a>
-        <a href="#shop">Shop</a>
+        <a href="#jouer">Jouer</a>
+        <a href="#evoluer">Evoluer</a>
+        <a href="#rules">Your Life, Your Rules</a>
+        <a href="#domaines">Explorer les 5 domaines</a>
+        <a href="#fonctionnement">Comment ca marche</a>
       </nav>
-      <div class="header-actions">
-        <a href="#login">Se connecter</a>
-        <a class="pill-button" href="#start">Commencer</a>
-      </div>
     </header>
 
     <main>
-      <section class="hero video-hero" id="start" aria-label="Introduction THE PROTOCOL">
-        <video autoplay muted loop playsinline poster="assets/sleep-page.png">
+      <section class="hero video-hero" id="jouer" aria-label="Introduction THE PROTOCOL">
+        <video autoplay muted loop playsinline poster="assets/domains-page.png">
           <source src="assets/hero-video.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content reveal">
-          <p class="eyebrow">Your life. Your rules.</p>
-          <h1>Cree. Joue. Evolue.</h1>
-          <p class="hero-rule">YOUR LIFE. YOUR RULES.</p>
+          <p class="eyebrow">THE PROTOCOL</p>
+          <h1>Jouer, evoluer.</h1>
+          <p class="hero-rule" id="rules">Your Life, Your Rules.</p>
           <div class="button-row">
             <a class="primary-button" href="#domaines">Explorer les 5 domaines</a>
-            <a class="ghost-button" href="#systeme">Comment ca marche</a>
+            <a class="ghost-button" href="#fonctionnement">Comment ca marche</a>
           </div>
         </div>
       </section>
 
-      <section class="system-strip" id="systeme" aria-label="Systeme THE PROTOCOL">
-        <div class="step reveal"><span>01</span>Plan</div>
-        <div class="step reveal"><span>02</span>Act</div>
-        <div class="step reveal"><span>03</span>Track</div>
-        <div class="step reveal"><span>04</span>Review</div>
-        <div class="step reveal"><span>05</span>Progress</div>
-        <p class="system-line reveal">La vie est un jeu. Il te faut simplement de meilleures regles.</p>
-      </section>
-
-      <section class="section sleep-section" id="pourquoi">
-        <div class="sleep-hero reveal">
-          <div>
-            <p class="eyebrow">Un meilleur demain commence ce soir</p>
-            <h2>Sommeil & recuperation</h2>
-            <p>Comprendre ton sommeil. Mieux recuperer. Retrouver ton energie.</p>
-            <div class="button-row">
-              <a class="light-button" href="#shop">Commencer</a>
-              <a class="yellow-button" href="#programme">Decouvrir le programme</a>
-            </div>
-          </div>
-          <img src="assets/sleep-page.png" alt="Univers visuel Sommeil et recuperation THE PROTOCOL">
+      <section class="method-section" id="fonctionnement" aria-label="Comment ca marche">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Comment ca marche</p>
+          <h2>Un jeu personnel, des regles simples, une progression visible.</h2>
         </div>
-
-        <div class="problem-grid">
-          <article class="copy-block reveal">
-            <p class="section-kicker">Le probleme</p>
-            <h2>Quand le sommeil deraille, tout devient plus difficile.</h2>
-            <p>Mieux dormir, ce n'est pas seulement dormir plus. C'est retrouver une base stable pour penser, agir, apprendre et recuperer.</p>
+        <div class="method-grid">
+          <article class="method-card reveal">
+            <span>01</span>
+            <h3>Choisis un domaine</h3>
+            <p>Commence par l'endroit de ta vie qui a besoin du plus de clarte maintenant.</p>
           </article>
-          <div class="impact-cards">
-            <div class="impact reveal"><span>⚡</span>Moins d'energie</div>
-            <div class="impact reveal"><span>◎</span>Concentration reduite</div>
-            <div class="impact reveal"><span>♡</span>Humeur perturbee</div>
-            <div class="impact reveal"><span>↗</span>Recuperation plus lente</div>
-          </div>
+          <article class="method-card reveal" id="evoluer">
+            <span>02</span>
+            <h3>Pose une action</h3>
+            <p>Une action courte, concrete, mesurable. Rien de flou, rien de trop lourd.</p>
+          </article>
+          <article class="method-card reveal">
+            <span>03</span>
+            <h3>Observe et upgrade</h3>
+            <p>Tu ajustes, tu gardes ce qui marche, tu avances sans repartir de zero.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section solution-section" id="outils">
+      <section class="domains-section" id="domaines" aria-label="Les cinq domaines">
         <div class="section-heading reveal">
-          <p class="section-kicker">La solution</p>
-          <h2>Ton sommeil n'a pas besoin d'etre parfait. Il a besoin d'un protocole.</h2>
-        </div>
-        <div class="four-steps">
-          <article class="reveal"><span>1</span><h3>Comprendre</h3><p>Decouvre comment fonctionne ton sommeil.</p></article>
-          <article class="reveal"><span>2</span><h3>Observer</h3><p>Identifie ce qui ameliore ou perturbe tes nuits.</p></article>
-          <article class="reveal"><span>3</span><h3>Tester</h3><p>Change une chose a la fois.</p></article>
-          <article class="reveal"><span>4</span><h3>Construire</h3><p>Cree ton protocole personnel.</p></article>
+          <p class="section-kicker">Explorer les 5 domaines</p>
+          <h2>La page centrale de THE PROTOCOL.</h2>
+          <p>Chaque domaine ouvre une porte differente. Tu choisis ou jouer, quoi renforcer, puis tu construis ton protocole.</p>
         </div>
 
-        <div class="tools-panel reveal">
-          <div>
-            <p class="section-kicker">Les outils</p>
-            <h2>Des solutions concretes pour ton quotidien.</h2>
-            <a class="text-link" href="#shop">Explorer les outils</a>
-          </div>
-          <div class="tool-grid">
-            <div class="tool-card"><span>☾</span>Sleep Saver</div>
-            <div class="tool-card"><span>〰</span>Respiration</div>
-            <div class="tool-card"><span>✎</span>Journal sommeil</div>
-            <div class="tool-card"><span>◉</span>Focus</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section domains-section" id="domaines">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Page principale</p>
-          <h2>Les 5 domaines THE PROTOCOL.</h2>
-          <p>Chaque domaine a sa couleur, son energie et ses outils. Clique sur une carte pour construire ton premier protocole.</p>
-        </div>
         <div class="domains-showcase reveal">
-          <img src="assets/domains-cards.png" alt="Cartes colorees des cinq domaines THE PROTOCOL">
-        </div>
-        <div class="domain-grid" role="tablist" aria-label="Choisir un domaine">
-          <button class="domain-card blue reveal active" type="button" data-domain="sleep" role="tab" aria-selected="true"><h3>Sommeil & recuperation</h3><p>Dormir. Recuperer. Recharger.</p><span>→</span></button>
-          <button class="domain-card green reveal" type="button" data-domain="nutrition" role="tab" aria-selected="false"><h3>Nutrition & sante</h3><p>Nourrir. Comprendre. Equilibrer.</p><span>→</span></button>
-          <button class="domain-card red reveal" type="button" data-domain="performance" role="tab" aria-selected="false"><h3>Corps & performance</h3><p>Bouger. Renforcer. Progresser.</p><span>→</span></button>
-          <button class="domain-card orange reveal" type="button" data-domain="mental" role="tab" aria-selected="false"><h3>Mental & apprentissage</h3><p>Apprendre. Comprendre. Creer.</p><span>→</span></button>
-          <button class="domain-card purple reveal" type="button" data-domain="routine" role="tab" aria-selected="false"><h3>Routine & motivation</h3><p>Planifier. Agir. Continuer.</p><span>→</span></button>
-        </div>
-        <article class="domain-detail reveal" data-active-domain="sleep" aria-live="polite">
-          <div>
-            <p class="section-kicker" id="domain-kicker">Domaine bleu</p>
-            <h3 id="domain-title">Sommeil & recuperation</h3>
-            <p id="domain-copy">Reprendre de l'energie commence par des nuits plus simples, mieux observees et mieux protegees.</p>
-          </div>
-          <ul id="domain-actions">
-            <li>Sleep Saver</li>
-            <li>Respiration du soir</li>
-            <li>Journal sommeil</li>
-          </ul>
-          <a class="domain-link" id="domain-link" href="#pourquoi">Entrer dans ce domaine</a>
-        </article>
-        <div class="domain-manifesto reveal">
-          <strong>ONE TOOL. ONE DAY. ONE ACTION. ONE UPGRADE.</strong>
-          <a class="primary-button" href="#shop">Choisir mon premier domaine</a>
-        </div>
-      </section>
-
-      <section class="section programme-section" id="programme">
-        <div class="programme-card reveal">
-          <div>
-            <p class="section-kicker">Le programme</p>
-            <h2>31 jours pour mieux comprendre tes nuits.</h2>
-            <p>Observer → Ajuster → Tester → Construire</p>
-          </div>
-          <a class="yellow-button" href="#shop">Commencer le programme</a>
-        </div>
-      </section>
-
-      <section class="section calendar-section" id="calendrier">
-        <div class="calendar-hero reveal">
-          <img src="assets/calendar-wide.png" alt="Douze calendriers textiles colores alignes">
-          <div class="calendar-copy">
-            <p class="eyebrow">THE PROTOCOL</p>
-            <h2>Calendrier</h2>
-            <p>12 mois. 12 couleurs. 1 protocole.</p>
-            <a class="primary-button" href="#calendar-details">Decouvrir le calendrier</a>
-          </div>
-        </div>
-        <div class="calendar-details" id="calendar-details">
-          <div class="copy-block reveal">
-            <p class="section-kicker">Pourquoi</p>
-            <h2>Ta vie devient plus claire quand tu peux la voir.</h2>
-            <p>Transforme tes objectifs, habitudes et projets en une carte visible de ton annee.</p>
-          </div>
-          <img class="calendar-product reveal" src="assets/calendar-product.png" alt="Calendrier THE PROTOCOL en laine avec douze mois colores">
-        </div>
-        <div class="month-grid reveal" aria-label="Les douze mois">
-          <span>Janvier</span><span>Fevrier</span><span>Mars</span><span>Avril</span><span>Mai</span><span>Juin</span>
-          <span>Juillet</span><span>Aout</span><span>Septembre</span><span>Octobre</span><span>Novembre</span><span>Decembre</span>
-        </div>
-      </section>
-
-      <section class="section shop-section" id="shop">
-        <div class="shop-hero reveal">
-          <div>
-            <p class="section-kicker">Shop</p>
-            <h2>Build your protocol.</h2>
-            <p>Choisis les outils qui t'aident a mieux dormir, mieux penser, mieux bouger et mieux vivre.</p>
-            <a class="primary-button" href="#products">Explorer le shop</a>
-          </div>
-          <img src="assets/shop-categories.png" alt="Categories de boutique THE PROTOCOL">
+          <img src="assets/domains-page.png" alt="Page des cinq domaines THE PROTOCOL">
         </div>
 
-        <div class="filters reveal" aria-label="Filtres produits">
-          <button class="active" data-filter="all">Tout</button>
-          <button data-filter="sleep">Sommeil</button>
-          <button data-filter="nutrition">Nutrition</button>
-          <button data-filter="performance">Performance</button>
-          <button data-filter="mental">Apprentissage</button>
-          <button data-filter="routine">Routine</button>
-        </div>
-
-        <div class="products" id="products">
-          <article class="product-card reveal" data-category="sleep"><span class="product-visual blue">31</span><h3>Guide 31 jours</h3><p>Sommeil & recuperation</p><strong>29 €</strong><button>Ajouter</button></article>
-          <article class="product-card reveal" data-category="mental"><span class="product-visual orange">01</span><h3>Les regles du jeu</h3><p>Le livre principal</p><strong>39 €</strong><button>Ajouter</button></article>
-          <article class="product-card reveal" data-category="routine"><span class="product-visual purple">12</span><h3>Calendrier 12 mois</h3><p>Visualise ton annee</p><strong>49 €</strong><button>Ajouter</button></article>
-          <article class="product-card reveal" data-category="sleep"><span class="product-visual blue">Zz</span><h3>Sleep Kit</h3><p>Masque, journal et guide</p><strong>59 €</strong><button>Ajouter</button></article>
-          <article class="product-card reveal" data-category="performance"><span class="product-visual red">∞</span><h3>Performance Cards</h3><p>Une action simple a la fois</p><strong>24 €</strong><button>Ajouter</button></article>
-          <article class="product-card reveal" data-category="nutrition"><span class="product-visual green">+</span><h3>Nutrition Cards</h3><p>Equilibre sans surcharge</p><strong>24 €</strong><button>Ajouter</button></article>
-        </div>
-
-        <div class="final-cta reveal">
-          <h2>One day. One action. One upgrade.</h2>
-          <a class="yellow-button" href="#top">Commencer aujourd'hui</a>
+        <div class="domain-grid" role="list" aria-label="Les cinq domaines THE PROTOCOL">
+          <article class="domain-card blue reveal" role="listitem">
+            <h3>Sommeil & recuperation</h3>
+            <p>Dormir. Recuperer. Recharger.</p>
+          </article>
+          <article class="domain-card green reveal" role="listitem">
+            <h3>Nutrition & sante</h3>
+            <p>Nourrir. Comprendre. Equilibrer.</p>
+          </article>
+          <article class="domain-card red reveal" role="listitem">
+            <h3>Corps & performance</h3>
+            <p>Bouger. Renforcer. Progresser.</p>
+          </article>
+          <article class="domain-card orange reveal" role="listitem">
+            <h3>Mental & apprentissage</h3>
+            <p>Apprendre. Comprendre. Creer.</p>
+          </article>
+          <article class="domain-card purple reveal" role="listitem">
+            <h3>Routine & motivation</h3>
+            <p>Planifier. Agir. Continuer.</p>
+          </article>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <a class="brand" href="#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a>
-      <nav aria-label="Navigation secondaire">
-        <a href="#pourquoi">Pourquoi</a>
-        <a href="#domaines">Domaines</a>
-        <a href="#calendrier">Calendrier</a>
-        <a href="#shop">Shop</a>
-      </nav>
-      <p>Your life. Your rules.</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>
