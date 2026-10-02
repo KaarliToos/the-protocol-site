@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>THE PROTOCOL</title>
-    <meta name="description" content="THE PROTOCOL - jouer, evoluer, construire tes propres regles.">
+    <title>THE PROTOCOL - Créer. Jouer. Évoluer.</title>
+    <meta name="description" content="THE PROTOCOL transforme le sommeil, le mental, la routine, la nutrition et le corps en actions simples.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="THE PROTOCOL accueil">
+      <a class="brand" href="index.html#top" aria-label="THE PROTOCOL accueil">
         <span>THE</span>
         <strong>PROTOCOL</strong>
         <i></i>
@@ -22,7 +22,7 @@
         <span></span>
       </button>
       <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#domaines">Domaines</a>
+        <a href="index.html#domaines">Domaines</a>
         <a href="programme.html">Programme</a>
         <a href="calendrier.html">Calendrier</a>
         <a href="shop.html">Shop</a>
@@ -30,53 +30,104 @@
     </header>
 
     <main>
-      <section class="hero video-hero" id="jouer" aria-label="Introduction THE PROTOCOL">
+      <section class="hero video-hero" aria-label="Introduction THE PROTOCOL">
         <video autoplay muted loop playsinline poster="assets/domains-page.png">
           <source src="assets/hero-video.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content reveal">
+          <p class="eyebrow">Bienvenue dans THE PROTOCOL</p>
           <h1>Créer. Jouer. Évoluer.</h1>
+          <p>Un système simple pour choisir un domaine, faire une action par jour, suivre tes progrès et construire une meilleure version de toi.</p>
           <div class="button-row">
             <a class="primary-button" href="#domaines">Explorer les 5 domaines</a>
-            <a class="ghost-button" href="#domaines">Comment ça marche</a>
+            <a class="ghost-button" href="programme.html">Comment ça marche</a>
           </div>
         </div>
       </section>
 
       <section class="domains-section" id="domaines" aria-label="Les cinq domaines">
         <div class="section-heading reveal">
+          <p class="section-kicker">Choisis ta porte d'entrée</p>
           <h2>Bienvenue au protocole.</h2>
+          <p>Chaque domaine a sa couleur, ses outils, sa page et sa place dans le programme. Tu peux commencer par celui qui bloque le plus ta journée.</p>
         </div>
 
         <div class="protocol-grid">
           <a class="protocol-card large blue reveal" href="sommeil.html">
             <img src="assets/sleep-page.png" alt="Sommeil et récupération">
+            <span>01</span>
             <strong>Sommeil & récupération</strong>
+            <em>Récupérer pour mieux vivre.</em>
           </a>
           <a class="protocol-card orange reveal" href="mental.html">
             <img src="assets/domains-page.png" alt="Mental et apprentissage">
+            <span>02</span>
             <strong>Mental & apprentissage</strong>
+            <em>Comprendre, retenir, avancer.</em>
           </a>
           <a class="protocol-card purple reveal" href="routine.html">
             <img src="assets/domains-cards.png" alt="Routine et motivation">
+            <span>03</span>
             <strong>Routine & motivation</strong>
+            <em>Transformer les intentions en rythme.</em>
           </a>
           <a class="protocol-card green reveal" href="nutrition.html">
             <img src="assets/domains-page.png" alt="Nutrition et santé">
+            <span>04</span>
             <strong>Nutrition & santé</strong>
+            <em>Nourrir l'énergie, calmer le système.</em>
           </a>
           <a class="protocol-card red reveal" href="performance.html">
             <img src="assets/shop-categories.png" alt="Corps et performance">
+            <span>05</span>
             <strong>Corps & performance</strong>
+            <em>Bouger, se dépasser, se sentir solide.</em>
           </a>
         </div>
+
+        <div class="system-strip reveal" id="comment-ca-marche">
+          <article>
+            <span>1</span>
+            <h3>Choisis</h3>
+            <p>Tu pars d'un domaine réel : sommeil, mental, routine, nutrition ou corps.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Agis</h3>
+            <p>Une action simple par jour. Pas de théorie vide, juste un mouvement concret.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Mesure</h3>
+            <p>Le calendrier rend tes efforts visibles et garde la progression en jeu.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Évolue</h3>
+            <p>Le programme 31 jours relie les actions pour créer une vraie transformation.</p>
+          </article>
+        </div>
+
         <div class="domain-manifesto reveal">
           <strong>ONE TOOL. ONE DAY. ONE ACTION. ONE UPGRADE.</strong>
           <a class="primary-button" href="programme.html">Voir le programme</a>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="index.html#top" aria-label="THE PROTOCOL accueil">
+        <span>THE</span>
+        <strong>PROTOCOL</strong>
+        <i></i>
+      </a>
+      <nav aria-label="Navigation pied de page">
+        <a href="programme.html">Programme 31 jours</a>
+        <a href="calendrier.html">Calendrier</a>
+        <a href="shop.html">Shop</a>
+      </nav>
+    </footer>
 
     <script src="script.js"></script>
   </body>

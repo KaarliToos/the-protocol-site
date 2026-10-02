@@ -4,14 +4,58 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Programme 31 jours - THE PROTOCOL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="simple-page blue">
-      <a class="back-link" href="index.html">← Retour</a>
-      <h1>Programme 31 jours.</h1>
-      <p>Observer. Ajuster. Tester. Construire. Cette page deviendra le parcours complet.</p>
-      <img src="assets/calendar-wide.png" alt="Programme 31 jours THE PROTOCOL">
+    <header class="site-header">
+      <a class="brand" href="index.html#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a>
+      <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links"><a href="index.html#domaines">Domaines</a><a href="programme.html">Programme</a><a href="calendrier.html">Calendrier</a><a href="shop.html">Shop</a></nav>
+    </header>
+    <main>
+      <section class="page-hero blue">
+        <div class="reveal">
+          <a class="back-link" href="index.html#domaines">Retour à l'accueil</a>
+          <p class="page-kicker">La méthode</p>
+          <h1>Programme 31 jours.</h1>
+          <p>Un cycle simple pour choisir un domaine, agir chaque jour, regarder ce qui change et garder ce qui marche.</p>
+          <div class="button-row"><a class="ghost-button" href="calendrier.html">Utiliser le calendrier</a><a class="ghost-button" href="shop.html">Préparer mes outils</a></div>
+        </div>
+        <img class="reveal" src="assets/calendar-wide.png" alt="Programme 31 jours THE PROTOCOL">
+      </section>
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="feature-copy reveal">
+            <p class="section-kicker">Comment ça marche</p>
+            <h2>31 jours pour passer de l'idée à l'habitude.</h2>
+            <p>Le programme ne te demande pas de tout changer. Il te donne une séquence : observer, ajuster, tester, construire. Chaque jour doit avoir une action claire.</p>
+          </div>
+          <div class="step-grid reveal">
+            <article class="step-card"><span>1</span><h3>Observer</h3><p>Comprendre ton point de départ sans te juger.</p></article>
+            <article class="step-card"><span>2</span><h3>Ajuster</h3><p>Retirer le frottement qui t'empêche d'agir.</p></article>
+            <article class="step-card"><span>3</span><h3>Tester</h3><p>Faire une action courte et mesurer le résultat.</p></article>
+            <article class="step-card"><span>4</span><h3>Construire</h3><p>Garder ce qui marche et passer au domaine suivant.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="tiles-section">
+        <div class="tiles-wrap">
+          <h2>Choisir le point de départ.</h2>
+          <div class="related-grid">
+            <a class="related-card blue" href="sommeil.html"><h3>Sommeil</h3><p>Pour retrouver de l'énergie.</p></a>
+            <a class="related-card orange" href="mental.html"><h3>Mental</h3><p>Pour apprendre et décider mieux.</p></a>
+            <a class="related-card purple" href="routine.html"><h3>Routine</h3><p>Pour tenir dans le temps.</p></a>
+            <a class="related-card green" href="nutrition.html"><h3>Nutrition</h3><p>Pour stabiliser le corps.</p></a>
+            <a class="related-card red" href="performance.html"><h3>Corps</h3><p>Pour bouger et progresser.</p></a>
+            <a class="related-card orange" href="calendrier.html"><h3>Calendrier</h3><p>Pour rendre la progression visible.</p></a>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="site-footer"><a class="brand" href="index.html#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a><nav><a href="index.html#domaines">Domaines</a><a href="calendrier.html">Calendrier</a><a href="shop.html">Shop</a></nav></footer>
+    <script src="script.js"></script>
   </body>
 </html>

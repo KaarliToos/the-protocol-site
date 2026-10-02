@@ -4,14 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sommeil & récupération - THE PROTOCOL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="simple-page blue">
-      <a class="back-link" href="index.html">← Retour</a>
-      <h1>Sommeil & récupération.</h1>
-      <p>Cette page accueillera le protocole sommeil, le programme et les outils de récupération.</p>
-      <img src="assets/sleep-page.png" alt="Sommeil et récupération THE PROTOCOL">
+    <header class="site-header">
+      <a class="brand" href="index.html#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a>
+      <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links"><a href="index.html#domaines">Domaines</a><a href="programme.html">Programme</a><a href="calendrier.html">Calendrier</a><a href="shop.html">Shop</a></nav>
+    </header>
+    <main>
+      <section class="page-hero blue">
+        <div class="reveal">
+          <a class="back-link" href="index.html#domaines">Retour aux domaines</a>
+          <p class="page-kicker">Domaine 01</p>
+          <h1>Sommeil & récupération.</h1>
+          <p>La base du protocole : mieux dormir pour avoir plus d'énergie, plus de clarté et une meilleure humeur.</p>
+          <div class="button-row"><a class="ghost-button" href="programme.html">Commencer 31 jours</a><a class="ghost-button" href="calendrier.html">Suivre mes nuits</a></div>
+        </div>
+        <img class="reveal" src="assets/sleep-page.png" alt="Sommeil et récupération THE PROTOCOL">
+      </section>
+      <section class="content-section">
+        <div class="content-grid">
+          <div class="feature-copy reveal">
+            <p class="section-kicker">Pourquoi ça compte</p>
+            <h2>Quand le sommeil revient, tout le reste devient plus facile.</h2>
+            <p>Le sommeil pilote la concentration, la motivation, la récupération physique et la gestion des émotions. Ici, on commence par des actions petites mais visibles.</p>
+          </div>
+          <div class="tool-grid reveal">
+            <article class="tool-card"><strong>Rituel du soir</strong><small>Écran, lumière, respiration et routine de fermeture.</small></article>
+            <article class="tool-card"><strong>Score énergie</strong><small>Noter la nuit et relier le résultat à la journée.</small></article>
+            <article class="tool-card"><strong>Reset express</strong><small>Une mini-action pour repartir quand la nuit a été mauvaise.</small></article>
+          </div>
+        </div>
+      </section>
+      <section class="tiles-section">
+        <div class="tiles-wrap">
+          <h2>La suite logique.</h2>
+          <div class="related-grid">
+            <a class="related-card purple" href="routine.html"><h3>Routine</h3><p>Installer l'heure, le rythme et le suivi.</p></a>
+            <a class="related-card orange" href="mental.html"><h3>Mental</h3><p>Utiliser le repos pour mieux apprendre.</p></a>
+            <a class="related-card red" href="performance.html"><h3>Corps</h3><p>Récupérer pour progresser sans se cramer.</p></a>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="site-footer"><a class="brand" href="index.html#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a><nav><a href="programme.html">Programme</a><a href="calendrier.html">Calendrier</a><a href="shop.html">Shop</a></nav></footer>
+    <script src="script.js"></script>
   </body>
 </html>

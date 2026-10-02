@@ -4,14 +4,50 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shop - THE PROTOCOL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="simple-page purple">
-      <a class="back-link" href="index.html">← Retour</a>
-      <h1>Shop.</h1>
-      <p>Cette page accueillera les guides, calendriers, kits et outils THE PROTOCOL.</p>
-      <img src="assets/shop-categories.png" alt="Shop THE PROTOCOL">
+    <header class="site-header">
+      <a class="brand" href="index.html#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a>
+      <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links"><a href="index.html#domaines">Domaines</a><a href="programme.html">Programme</a><a href="calendrier.html">Calendrier</a><a href="shop.html">Shop</a></nav>
+    </header>
+    <main>
+      <section class="page-hero purple">
+        <div class="reveal">
+          <a class="back-link" href="index.html#domaines">Retour à l'accueil</a>
+          <p class="page-kicker">Outils THE PROTOCOL</p>
+          <h1>Shop.</h1>
+          <p>Les guides, calendriers et kits servent le même système : choisir, agir, mesurer, évoluer.</p>
+          <div class="button-row"><a class="ghost-button" href="programme.html">Voir le programme</a><a class="ghost-button" href="calendrier.html">Voir le calendrier</a></div>
+        </div>
+        <img class="reveal" src="assets/shop-categories.png" alt="Shop THE PROTOCOL">
+      </section>
+      <section class="tiles-section">
+        <div class="tiles-wrap">
+          <h2>Des outils par usage.</h2>
+          <div class="shop-grid">
+            <article class="tool-card shop-card"><img src="assets/calendar-product.png" alt="Calendrier THE PROTOCOL"><div><strong>Calendrier</strong><small>12 mois pour rendre tes actions visibles.</small></div></article>
+            <article class="tool-card shop-card"><img src="assets/sleep-page.png" alt="Guide sommeil"><div><strong>Guide sommeil</strong><small>Rituels, reset et suivi de récupération.</small></div></article>
+            <article class="tool-card shop-card"><img src="assets/domains-cards.png" alt="Cartes domaines"><div><strong>Cartes domaines</strong><small>Choisir l'action du jour et rester dans le jeu.</small></div></article>
+          </div>
+        </div>
+      </section>
+      <section class="tiles-section">
+        <div class="tiles-wrap">
+          <h2>Revenir au protocole.</h2>
+          <div class="related-grid">
+            <a class="related-card blue" href="sommeil.html"><h3>Sommeil</h3><p>Commencer par la récupération.</p></a>
+            <a class="related-card orange" href="programme.html"><h3>31 jours</h3><p>Transformer un outil en progression.</p></a>
+            <a class="related-card green" href="nutrition.html"><h3>Nutrition</h3><p>Choisir un kit selon ton besoin.</p></a>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="site-footer"><a class="brand" href="index.html#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a><nav><a href="index.html#domaines">Domaines</a><a href="programme.html">Programme</a><a href="calendrier.html">Calendrier</a></nav></footer>
+    <script src="script.js"></script>
   </body>
 </html>

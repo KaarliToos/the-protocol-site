@@ -4,14 +4,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calendrier - THE PROTOCOL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="simple-page orange">
-      <a class="back-link" href="index.html">← Retour</a>
-      <h1>Calendrier.</h1>
-      <p>12 mois. 12 couleurs. 1 protocole. Cette page accueillera le calendrier complet.</p>
-      <img src="assets/calendar-product.png" alt="Calendrier THE PROTOCOL">
+    <header class="site-header">
+      <a class="brand" href="index.html#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a>
+      <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links"><a href="index.html#domaines">Domaines</a><a href="programme.html">Programme</a><a href="calendrier.html">Calendrier</a><a href="shop.html">Shop</a></nav>
+    </header>
+    <main>
+      <section class="page-hero orange">
+        <div class="reveal">
+          <a class="back-link" href="index.html#domaines">Retour à l'accueil</a>
+          <p class="page-kicker">Suivi visible</p>
+          <h1>Calendrier.</h1>
+          <p>12 mois. 12 couleurs. 1 protocole. Le calendrier transforme tes actions en preuves visibles.</p>
+          <div class="button-row"><a class="ghost-button" href="programme.html">Suivre 31 jours</a><a class="ghost-button" href="shop.html">Voir le produit</a></div>
+        </div>
+        <img class="reveal" src="assets/calendar-product.png" alt="Calendrier THE PROTOCOL">
+      </section>
+      <section class="feature-section">
+        <img class="reveal" src="assets/calendar-wide.png" alt="Calendrier annuel THE PROTOCOL">
+        <div class="feature-copy reveal">
+          <p class="section-kicker">Le rôle du calendrier</p>
+          <h2>Ce que tu vois, tu peux l'améliorer.</h2>
+          <p>Chaque case représente une action. Chaque couleur représente un mois. Le but n'est pas d'être parfait : c'est de rendre la progression assez claire pour reprendre facilement.</p>
+          <div class="button-row"><a class="dark-button" href="programme.html">Comprendre le cycle</a></div>
+        </div>
+      </section>
+      <section class="tiles-section">
+        <div class="tiles-wrap">
+          <h2>À suivre dessus.</h2>
+          <div class="tool-grid">
+            <article class="tool-card"><strong>Sommeil</strong><small>Heure de coucher, énergie du matin, rituel du soir.</small></article>
+            <article class="tool-card"><strong>Routine</strong><small>Action du jour, constance, reprise après pause.</small></article>
+            <article class="tool-card"><strong>Corps</strong><small>Mouvement, récupération, progression douce.</small></article>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="site-footer"><a class="brand" href="index.html#top"><span>THE</span><strong>PROTOCOL</strong><i></i></a><nav><a href="index.html#domaines">Domaines</a><a href="programme.html">Programme</a><a href="shop.html">Shop</a></nav></footer>
+    <script src="script.js"></script>
   </body>
 </html>
