@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pomodoro - THE PROTOCOL</title>
+    <meta name="description" content="Pomodoro THE PROTOCOL - focus, apprentissage et routines colorees.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=domains-pages-1">
+  <link rel="stylesheet" href="experience.css"><link rel="stylesheet" href="refresh.css?v=lumi-flow-5"><link rel="stylesheet" href="lumi-vector.css?v=5"><link rel="stylesheet" href="illustrated-journeys.css?v=1"></head>
+  <body class="pomodoro-body">
+    <a class="menu-return" href="index.html#domaines">Menu</a>
+    <main class="pomodoro-page">
+      <a class="back-home pomodoro-back" href="mental.html">THE PROTOCOL</a>
+      <section class="timer-shell" aria-label="Pomodoro THE PROTOCOL">
+        <div class="timer-side">
+          <button class="mode sleep">Sommeil</button>
+          <button class="mode nutrition">Nutrition</button>
+          <button class="mode activity">Activite</button>
+          <button class="mode learn active">Apprendre</button>
+          <button class="mode routine">Routine</button>
+        </div>
+
+        <div class="timer-main">
+          <p>Temps pour toi</p>
+          <h1 id="timer">25:00</h1>
+          <div class="timer-options" aria-label="Choisir la duree">
+            <button data-minutes="5">5m</button>
+            <button data-minutes="10">10m</button>
+            <button data-minutes="15">15m</button>
+            <button class="selected" data-minutes="25">25m</button>
+            <button data-minutes="30">30m</button>
+            <button data-minutes="45">45m</button>
+          </div>
+          <div class="timer-controls">
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="calendar-strip">
+        <p>Calendrier</p>
+        <div class="calendar-rows">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      let duration = 25 * 60;
+      let remaining = duration;
+      let running = false;
+      let intervalId = null;
+      let deadline = 0;
+      const timer = document.querySelector("#timer");
+      const start = document.querySelector("#start");
+      const reset = document.querySelector("#reset");
+      const options = document.querySelectorAll("[data-minutes]");
+
+      function render() {
+        const minutes = String(Math.floor(remaining / 60)).padStart(2, "0");
+        const seconds = String(remaining % 60).padStart(2, "0");
+        timer.textContent = `${minutes}:${seconds}`;
+      }
+
+      function stop() {
+        running = false;
+        start.textContent = "Start";
+        clearInterval(intervalId);
+      }
+
+      start.addEventListener("click", () => {
+        if (running) {
+          stop();
+          return;
+        }
+        running = true;
+        deadline = Date.now() + remaining * 1000;
+        start.textContent = "Pause";
+        intervalId = setInterval(() => {
+          remaining = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+          render();
+          if (remaining === 0) {
+            stop();
+            timer.textContent = "Time's up";
+          }
+        }, 1000);
+      });
+
+      reset.addEventListener("click", () => {
+        stop();
+        remaining = duration;
+        render();
+      });
+
+      options.forEach((button) => {
+        button.addEventListener("click", () => {
+          options.forEach((item) => item.classList.remove("selected"));
+          button.classList.add("selected");
+          duration = Number(button.dataset.minutes) * 60;
+          remaining = duration;
+          stop();
+          render();
+        });
+      });
+    </script>
+  <script src="hungarian.js?v=1" defer></script><script src="preferences.js?v=lumi-flow-5" defer></script>
+  <script src="experience.js?v=lumi-flow-5" defer></script>
+<script src="app.js" defer></script>
+  <script src="site-navigation.js?v=5" defer></script><script src="illustrated-journeys.js?v=1" defer></script></body>
+</html>
