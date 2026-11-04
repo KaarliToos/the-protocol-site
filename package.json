@@ -1,0 +1,12 @@
+{
+  "name": "the-protocol-site",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "python3 -m http.server 4174 --bind 127.0.0.1",
+    "test": "node --test tests/site.test.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "^27.0.0"
+  }
+}
