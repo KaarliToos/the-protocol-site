@@ -93,6 +93,7 @@ function render() {
  };
  }
  window.ProtocolLumi?.mount({page, lang, t, cards, files, colors, read});
+ window.ProtocolUpgrade?.mount({page,lang,t});
 }
 render();
 window.addEventListener('beforeunload',event=>{
