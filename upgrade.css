@@ -60,6 +60,13 @@ header>nav{display:none!important}
 .goal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0 24px}
 .goal-grid label{padding:13px;border:1px solid var(--line);border-radius:14px;background:var(--surface);cursor:pointer}
 .goal-grid input,.consent input{accent-color:var(--pink)}
+.pillar-fieldset{margin:25px 0;border:0;padding:0}
+.pillar-fieldset legend{font-weight:800;margin-bottom:12px}
+.first-domain-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.first-domain-options label{display:flex;align-items:center;gap:9px;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--surface);cursor:pointer;font-size:14px}
+.first-domain-options label:last-child{grid-column:1/-1}
+.first-domain-options input{accent-color:var(--pink)}
+.first-domain-options label:has(:checked){border-color:var(--pink);background:color-mix(in srgb,var(--pink) 8%,var(--surface))}
 .body-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .body-fields label{display:grid;gap:6px;font-weight:700}
 .unlock-profile .consent{display:flex;align-items:flex-start;gap:10px;margin:20px 0}
