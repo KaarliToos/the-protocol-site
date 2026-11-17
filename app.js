@@ -11,6 +11,9 @@
       document.querySelector('.timer-main > p').textContent = 'Temps pour toi · ' + ['Sommeil', 'Nutrition', 'Activite', 'Apprendre', 'Routine'][modes.indexOf(button)];
     });
   });
+  const requestedDomain = new URLSearchParams(location.search).get('domain');
+  const modeIndex = {sommeil:0,nutrition:1,performance:2,mental:3,routine:4}[requestedDomain];
+  if(Number.isInteger(modeIndex)) modes[modeIndex]?.click();
   const buttons = [...document.querySelectorAll('.product-actions button')];
   if (buttons.length) {
     let cart = {};

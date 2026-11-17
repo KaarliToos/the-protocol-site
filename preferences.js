@@ -234,10 +234,11 @@ const protocolEnglish = {
     const key = normal(value);
     const dictionary = language === "hu" ? protocolHungarian : protocolEnglish;
     if (dictionary[key]) return dictionary[key];
-    const prefix = key.match(/^\d{2} · /)?.[0] || '';
+    const prefix = key.match(/^(?:\d{2} · |[^\p{L}\p{N}]+)/u)?.[0] || '';
     const suffix = key.match(/ [→↗+]$/)?.[0] || '';
     const core = key.slice(prefix.length, suffix ? -suffix.length : undefined);
     if (dictionary[core]) return prefix + dictionary[core] + suffix;
+    if (/^Jour \d+/.test(key)) return key.replace('Jour',language==='hu'?'Nap':'Day');
     if (/^Niv\. \d+$/.test(key)) return key.replace('Niv.', language==='hu'?'Szint':'Lv.');
     if (key.startsWith('Panier (')) return key.replace('Panier (', language==='hu'?'Kosár (':'Cart (');
     if (key.startsWith('Temps pour toi · ')) {const mode = key.split(' · ')[1]; return 'Time for you · ' + (dictionary[mode] || mode);}
